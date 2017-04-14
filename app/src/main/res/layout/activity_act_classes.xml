@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lucas.msj_cliente_servido.Activity.Act_classes">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_ipServ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/TV_conectado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conectado"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/TV_desconectado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/desconectado"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/msj_msj"
+                android:layout_below="@+id/TV_conectado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:text="@string/mendsajes"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                />
+
+            <ScrollView android:id="@+id/textAreaScroller"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical"
+                android:paddingBottom="100dp">
+            <TextView
+                android:id="@+id/TV_mensajes"
+                android:scrollbars = "vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:id="@+id/ET_cuerpoComentario"
+                android:layout_weight="1"
+                android:textSize="17dp"
+                android:capitalize="sentences"
+                android:hint="@string/comentario"/>
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:id="@+id/BTN_agregarComentario"
+                android:src="@drawable/mens"
+                android:background="@drawable/bg_selector_boton_circulo"
+                android:onClick="enviarMensaje"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+
+
+</RelativeLayout>

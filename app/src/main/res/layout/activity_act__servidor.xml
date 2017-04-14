@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center|top">
+
+    <TextView
+        android:id="@+id/TV_serverState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciar_servidor"/>
+
+    <ImageButton
+        android:id="@+id/IB_stopServer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_selector_boton_circulo_azul"
+        android:src="@android:drawable/ic_media_play"
+        android:onClick="onClickPleyServer"/>
+
+    <ImageButton
+        android:id="@+id/IB_pleyServer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_selector_boton_circulo"
+        android:src="@android:drawable/ic_media_pause"
+        android:visibility="gone"
+        android:onClick="onClickStopServer"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/listaDeConectados"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/TV_conectados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+
+</LinearLayout>

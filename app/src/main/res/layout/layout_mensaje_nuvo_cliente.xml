@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/LL_mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/TV_mensaje_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nick"
+            android:textStyle="bold|italic"/>
+
+        <TextView
+            android:textStyle="italic"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/TV_mensaje_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mensaje"/>
+
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TV_mensaje_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hora"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/TV_mensaje_fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_mensajeNuevoCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="2dp"
+        android:background="#39a347">
+        <TextView
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:id="@+id/TV_mensajeNuevoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nuevoVliente"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/se_ha_unido_a_la_charla"
+            android:textColor="#fff"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+</LinearLayout>
